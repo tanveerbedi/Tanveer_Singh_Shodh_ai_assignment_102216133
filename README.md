@@ -34,16 +34,19 @@ The project is organized into four key Jupyter notebooks, each representing a di
 
 ## 🔁 End-to-End Workflow
 
+## 🔁 Project Workflow
+
 ```mermaid
 graph TD
-    A[Task 1 - Preprocessing] --> B[Cleaned Data Saved];
-    B --> C[Task 2 - Deep Learning (MLP)];
-    B --> D[Task 3 - RL Agent (CQL)];
-    C --> E[MLP Model Saved];
-    D --> F[CQL Agent Saved];
-    E --> G[Task 4 - Analysis];
+    A[Task 1 - Preprocessing.ipynb] --> B(Creates data/*.pkl);
+    B --> C[Task 2 - MLP.ipynb];
+    B --> D[Task 3 - CQL.ipynb];
+    C --> E(Creates models/mlp.keras);
+    D --> F(Creates models/cql_agent_updated.d3);
+    E --> G[Task 4 - Analysis.ipynb];
     F --> G;
-    G --> H[Comprehensive Comparison & Final Report];
+    G --> H(Prints Final Analysis Report);
+
 ```
 
 ---
@@ -96,3 +99,4 @@ The Deep Learning model focuses on accurate *risk prediction*, whereas the RL ag
 ## 👤 Author
 
 Developed by **Tanveer Singh**
+
